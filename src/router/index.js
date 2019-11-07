@@ -11,6 +11,10 @@ export default new Router({
     {
       path: '/details',
       component: () => import('@/views/details')
+    },
+    {
+      path: '/record',
+      component: () => import('@/views/details/record')
     }
   ]
 })

@@ -17,6 +17,9 @@
 .margin-top(@top){
   margin-top: @top / @base;
 }
+.margin-right(@right){
+  margin-right: @right / @base;
+}
 .padding-left(@left){
   padding-left: @left / @base;
 }
@@ -29,9 +32,21 @@
 .margin(@top, @left){
   margin: @top / @base @left / @base;
 }
+.margin(@size){
+  margin: @size / @base;
+}
 .padding(@top, @left){
   padding: @top / @base @left / @base;
 }
 .padding-top(@top){
   padding-top: @top / @base;
+}
+//.border-bottom(@size){
+//  border-bottom: @size / @base
+//}
+.top(@top){
+  top: @top / @base;
+}
+.left(@left){
+  left: @left / @base;
 }
