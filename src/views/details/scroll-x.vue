@@ -1,26 +1,21 @@
 <template>
-  <div class="scroll-box">
-    <div v-for="item in 40" :key="item" class="item">1</div>
-  </div>
+  <ul class="wrapper" ref="wrapper">
+    <li v-for="item in 40" :key="item" class="content">1</li>
+  </ul>
 </template>
 
 <script>
+import BSscroll from 'better-scroll'
 export default {
-  name: 'ScrollX'
+  name: 'ScrollX',
+  mounted() {
+    this.$nextTick(() => {
+      this.scroll = new BSscroll(this.$refs.wrapper, {
+        scrollX: true
+      })
+    })
+  }
 }
 </script>
 
-<style scoped lang="less">
-  .scroll-box{
-    white-space: nowrap;
-    height: .height(100rem);
-    box-sizing: border-box;
-  }
-  .item{
-    display: inline-block;
-    text-align: center;
-    height: .height(100rem);
-    width: .width(120rem);
-    margin: .margin(0, 40rem);
-  }
-</style>
+<style scoped lang="less"></style>
